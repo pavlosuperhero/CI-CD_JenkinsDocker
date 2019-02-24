@@ -16,7 +16,7 @@ pipeline {
                 script {
                     app = docker.build("pavlo/train-schedule")
                     app.inside {
-                        sh 'echo $(curl localhost:8081)'
+                        sh 'echo $(curl 192.168.10.12:8081)'
                     }
                 }
             }
